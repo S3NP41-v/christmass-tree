@@ -11,12 +11,12 @@ int main() {
     srand((unsigned int)time(NULL));
 
     int treeY;
-    printf("Taille du sapin :\n");
+    printf("Tree size :\n");
     scanf("%d", &treeY);
     int treeX = (2 * treeY) - 1;
 
     while (1) {
-        printf("\033[2J\033[H");  // Efface l'écran et déplace le curseur
+        printf("\033[2J\033[H");  // wipe screen, moves cursor
         for (int y = 0, s = 1; y < treeY; y++, s += 2) {
             int offset = (treeX - s) / 2;
             for (int i = 0; i < offset; i++) printf(" ");
